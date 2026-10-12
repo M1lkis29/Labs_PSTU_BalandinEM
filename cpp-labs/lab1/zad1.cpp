@@ -8,11 +8,13 @@ int main(){
     const float af = 1000.0f;
     const float bf = 0.0001f;
 
-    float cf = pow(af + bf, 3);
-    float df = pow(af, 3);
-    float ef = 3 * af * bf * bf;
-    float ff = pow(bf, 3);
-    float gf = 3 * af * af * bf;
+    float sumF = af + bf
+    float cf = sumF * sumF * sumF;
+    float df = af * af * af;
+    float ef = 3.0f * af * bf * bf;
+    float ff = bf * bf * bf;
+    float gf = 3.0f * af * af * bf;
+
     float chislitF = cf - df;
     float znamenatF = ef + ff + gf;
     float resultF = chislitF / znamenatF;
@@ -22,25 +24,19 @@ int main(){
     const double a = 1000.0;
     const double b = 0.0001;
 
-    double c = pow(a + b, 3);
-    double d = pow(a, 3);
-    double e = 3 * a * b * b;
-    double f = pow(b, 3);
-    double g = 3 * a * a * b;
+    double sumD = a + b
+    double c = sumD * sumD * sumD;
+    double d = a * a * a;
+    double e = 3.0 * a * b * b;
+    double f = b * b * b;
+    double g = 3.0 * a * a * b;
     double chislitD = c - d;
     double znamenatD = e + f + g;
     double resultD = chislitD / znamenatD;
 
-
-    cout << fixed << setprecision(12);
-    cout << "Задание 1. Вариант 4\n";
-    cout << "a = 1000, b = 0.0001\n\n";
-    cout << "float:  числитель = " << chislitF
-         << ", знаменатель = " << znamenatF
-         << ", результат = " << resultF << '\n';
-    cout << "double: числитель = " << chislitD
-         << ", знаменатель = " << znamenatD
-         << ", результат = " << resultD << "\n\n";
+    cout << "Задание 1. Вариант 4\n" << endl;
+    cout << "float : " << setprecision(10) << resultF << endl;
+    cout << "double : " << setprecision(10) << resultD << endl; 
 
     return 0;
 }
